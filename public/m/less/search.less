@@ -1,0 +1,41 @@
+@import "base.less";
+
+#main {
+    .search-form {
+        padding: .1rem;
+        form {
+            display: flex;
+            height: .34rem;
+            
+            input {
+                flex: 1;
+                border-radius: .06rem 0 0 .06rem;
+                background-color: #fff;
+                border: 1px solid @main-color;
+                border-right: none;
+                text-align: left;
+                font-size: .14rem;
+            }
+            button {
+                width: .6rem;
+                background-color: @main-color;
+                border-radius: 0 .06rem .06rem 0;
+            }
+        }
+    }
+    .search-history {
+        .mui-card-header {
+            font-size: .14rem;
+        }
+        .mui-card-content {
+            .mui-table-view {
+                font-size: .12rem;
+                .mui-table-view-cell:after {
+                    width: 90%;
+                }
+            }
+            
+        }
+       
+    }
+}

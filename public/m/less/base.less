@@ -1,0 +1,98 @@
+// MUI框架已经处理好了样式初始化的
+@main-color:#006699;
+body {
+    height: 100vh;
+    font-size: .14rem;
+    background-color: #fff;
+    padding: .45rem 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+img {
+    vertical-align: middle;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: .45rem;
+    background-color: @main-color;
+    padding: 0 .45rem;
+    h4,.category-form {
+        color: #fff;
+        margin: 0;
+        height: .45rem;
+        text-align: center;
+        line-height: .45rem;
+        font-weight: normal;
+    }
+    .category-form {
+        
+        input {
+            background-color: #fff;
+            text-align: left;
+            font-size: .14rem;
+        }
+       
+    }
+    a {
+        width: .45rem;
+        height: .45rem;
+        position: absolute;
+        text-align: center;
+        line-height: .45rem;
+        color: #fff;
+        &.fa-search,&.fa-home {
+            right: 0;
+            top: 0;
+        }
+        &.fa-chevron-left {
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: .45rem;
+    background-color: @main-color;
+    ul {
+        display: flex;
+        li {
+            width: 25%;
+            height: .45rem;
+            padding: .05rem;
+            a {
+                display: block;
+                width: 100%;
+                height: .45rem;
+                text-align: center;
+                color: #fff;
+                span {
+                    display: block;
+                    line-height: .14rem;
+                }
+                
+            }
+        }
+    }
+}
+
+#main {
+    position: relative;
+    height: 100%;
+}

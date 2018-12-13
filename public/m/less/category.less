@@ -1,0 +1,42 @@
+@import "base.less";
+
+#main {
+    display: flex;
+    background-color: #eee;
+    .category-left {
+       width: .8rem; 
+       background-color: #fff;
+       ul {
+           li {
+            border-bottom: 1px solid #ccc;
+               a {
+                   display: block;
+                   width: 100%;
+                   height: .45rem;
+                   text-align: center;
+                   line-height: .45rem;
+                   color: #666;;
+               }
+           }
+       }
+    }
+    .category-right {
+        padding: .1rem;
+        flex: 1;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                width: 33.33%;
+                padding: .01rem;
+                a {
+                    display: block;
+                    width: 100%;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
