@@ -32,14 +32,23 @@
                 <!--页眉，放置标题-->
                 <div class="mui-card-header">
                     <span>搜索历史</span>
-                    <a href="#">清空记录</a>
+                    <a href="#" class="fa fa-trash btn-clear-history">清空记录</a>
                 </div>
                 <!--内容区-->
                 <div class="mui-card-content">
                     <ul class="mui-table-view">
-                        <li class="mui-table-view-cell">迪奥999</li>
-                        <li class="mui-table-view-cell">斩男色</li>
-                        <li class="mui-table-view-cell">雅诗兰黛大表姐</li>
+                        <li class="mui-table-view-cell">
+                            迪奥999
+                            <span class="mui-badge btn-del">x</span>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            斩男色
+                            <span class="mui-badge btn-del">x</span>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            雅诗兰黛大表姐
+                            <span class="mui-badge btn-del">x</span>
+                        </li>
                     </ul>
                 </div>
 
@@ -50,13 +59,13 @@
     <footer id="footer">
         <ul>
             <li>
-                <a href="#">
+                <a href="index.html">
                     <i class="fa fa-home"></i>
                     <span>首页</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="category.html">
                     <i class="fa fa-bars"></i>
                     <span>分类</span>
                 </a>
@@ -68,16 +77,25 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="user.html">
                     <i class="fa fa-user"></i>
                     <span>我的</span>
                 </a>
             </li>
         </ul>
     </footer>
+    <script type="text/html" id="SearchHistoryTpl">
+        {{ each history value index }}
+            <li class="mui-table-view-cell">
+                {{ value }}
+                <span class="mui-badge btn-del" data-index="{{index}}" >x</span>
+            </li>
+        {{ /each }}
+    </script>
     <script src="lib/zepto/zepto.min.js"></script>
     <script src="lib/mui/js/mui.js"></script>
     <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/search.js"></script>
 </body>
 
 </html>

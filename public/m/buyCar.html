@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> category </title>
+    <title> buyCar </title>
     <link rel="stylesheet" href="lib/mui/css/mui.css">
     <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
-    <link rel="stylesheet/less" href="less/category.less">
+    <link rel="stylesheet/less" href="less/buyCar.less">
     <script src="lib/less/less.js"></script>
     <script src="js/rem.js"></script>
 </head>
@@ -17,38 +17,28 @@
     <!-- 头部区域 -->
     <header id="header">
         <a href="javascript:history.back();" class="fa fa-chevron-left"></a>
-        <div class="category-form">
-            <input type="search" placeholder="请输入搜索的商品">
-        </div>
-        <a href="search.html" class="fa fa-search"></a>
+        <h4>购物车</h4>
+        <a href="#" class="fa fa-refresh"></a>
     </header>
     </header>
     <!-- 主体部分 -->
     <main id="main">
-        <div class="category-left">
-            <div class="mui-scroll-wrapper">
-                <div class="mui-scroll">
-                    <ul>
-                        <!-- <li class="active"><a href="#">分类1</a></li> -->
-                    </ul>
-                </div>
-            </div>
-            
-        </div>
-        <div class="category-right">
-            <div class="mui-scroll-wrapper">
-                <div class="mui-scroll">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <span>Nick</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <ul class="mui-table-view car-list">
+            <li class="mui-table-view-cell mui-media">
+                <a href="javascript:;">
+                    <div class="mui-pull-left car-left">
+                        <img src="images/product.jpg" alt="">
+                    </div>
+                    <div class="mui-media-body">
+                        幸福
+                        <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+                        <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+                        
+                    </div>
+                </a>
+            </li>
+           
+        </ul>
     </main>
     <!-- 底部区域 -->
     <footer id="footer">
@@ -79,25 +69,9 @@
             </li>
         </ul>
     </footer>
-    <script type="text/html" id="categoryLeftTpl">
-        {{ each rows value index }}
-            <li class="{{ index==0?'active':''}}"><a href="#" data-id="{{ value.id }}">{{value.categoryName}}</a></li>
-        {{/each}}
-    </script>
-    <script type="text/html" id="categoryRightTpl">
-        {{ each rows value index }}
-            <li>
-                <a href="#">
-                    <img src="{{ value.brandLogo }}" alt="">
-                    <span>{{ value.brandName }}</span>
-                </a>
-            </li>
-        {{ /each }}
-    </script>
     <script src="lib/zepto/zepto.min.js"></script>
     <script src="lib/mui/js/mui.js"></script>
     <script src="lib/artTemplate/template-web.js"></script>
-    <script src="js/category.js"></script>
 </body>
 
 </html>

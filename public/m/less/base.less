@@ -18,6 +18,10 @@ img {
     vertical-align: middle;
 }
 
+a {
+    color: #666;
+}
+
 #header {
     position: fixed;
     top: 0;
@@ -41,6 +45,7 @@ img {
             background-color: #fff;
             text-align: left;
             font-size: .14rem;
+            margin: 0;
         }
        
     }
@@ -51,7 +56,7 @@ img {
         text-align: center;
         line-height: .45rem;
         color: #fff;
-        &.fa-search,&.fa-home {
+        &.fa-search,&.fa-home,&.fa-refresh {
             right: 0;
             top: 0;
         }
@@ -95,4 +100,57 @@ img {
 #main {
     position: relative;
     height: 100%;
+    .search-form {
+        padding: .1rem;
+        form {
+            display: flex;
+            height: .34rem;
+            
+            input {
+                flex: 1;
+                border-radius: .06rem 0 0 .06rem;
+                background-color: #fff;
+                border: 1px solid @main-color;
+                border-right: none;
+                text-align: left;
+                font-size: .14rem;
+            }
+            button {
+                width: .6rem;
+                background-color: @main-color;
+                border-radius: 0 .06rem .06rem 0;
+            }
+        }
+    }
+    .product-list {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            // border: 1px solid #eee;
+            li {
+                width: 50%;
+                padding: .05rem;
+                text-align: center;
+                a {
+                    border: 1px solid #eee;
+                    box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, .1);
+                    padding: .05rem;
+                    display: block;
+                    img {
+                        width: 100%;
+                    }
+                    .product-name {
+                        height: .4rem;
+                        overflow: hidden;
+                    }
+                }
+                // &:nth-child(2n) {
+                //     border-left: 1px solid #eee;
+                // }
+                // &:nth-child(n+3) {
+                //     border-top: 1px solid #eee;
+                // }
+            }
+        }
+    }
 }
